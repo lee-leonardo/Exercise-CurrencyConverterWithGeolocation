@@ -41,7 +41,7 @@ const CurrencyConverter = () => {
         setConvertedAmount(body.amount);
         setConversionRate(body.conversionRate);
       }).catch(error => {
-        console.error(error);    
+        console.error(error);
         setConversionError(error.message);
       });
   }
@@ -56,13 +56,15 @@ const CurrencyConverter = () => {
     <div className="CurrencyConverter">
       <auro-header display="500">Currency Converter</auro-header>
       <div>
-        <div>
+        <p>Select the amount of currency that you would like to convert.</p>
+        <div class="currency-input">
           <label htmlFor="amount">Amount: </label>
-          <input name="amount" type="number" onChange={updateAmount}></input>
+          <input class="currency-field" name="amount" type="number" onChange={updateAmount}></input>
         </div>
-        <div>
+        <div class="currency-input">
           <label htmlFor="from">From this currency </label>
           <select
+            class="currency-select"
             onChange={updateFromCurrency}
             name="from"
             defaultValue=""
@@ -77,9 +79,10 @@ const CurrencyConverter = () => {
             ))}
           </select>
         </div>
-        <div>
+        <div class="currency-input">
           <label htmlFor="to">To this currency </label>
           <select
+            class="currency-select"
             onChange={updateToCurrency}
             name="to"
             defaultValue=""
@@ -95,9 +98,9 @@ const CurrencyConverter = () => {
           </select>
         </div>
       </div>
-      <button onClick={convertFunds}>Convert</button>
+      <button class="convert-button" onClick={convertFunds}>Convert</button>
       <div>
-        {(convertedAmount && conversionRate) ? 
+        {(convertedAmount && conversionRate) ?
         <>
             <p>
             <strong>{amount} ({fromCurrency}) = {convertedAmount} ({toCurrency})</strong>

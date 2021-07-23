@@ -1,0 +1,64 @@
+:root {
+  --theme-color: blue;
+  --input-color: darkgray;
+  --input-font-size: 16px;
+}
+
+.CurrencyConverter {
+  border: solid 2px var(--theme-color);
+  border-radius: 30px;
+  display: inline-block;
+  padding: 16px 32px;
+  max-width: 400px;
+}
+
+.currency-input {
+  display: flex;
+  flex-flow: column;
+  vertical-align:middle;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+label, p {
+  font-size: 14px;
+}
+
+label {
+  font-weight: 500;
+}
+
+.currency-input > input,
+.currency-input > select {
+  margin-top: 4px;
+}
+
+.currency-field {
+  border: none;
+  border-bottom-color: var(--input-color);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+
+  color: var(--input-color);
+  font-size: var(--input-font-size);
+  font-weight: bold;
+}
+
+.currency-select {
+  border-color: var(--input-color);
+  color: var(--input-color);
+  padding: 8px;
+
+  font-size: var(--input-font-size);
+  font-weight: bold;
+}
+
+.convert-button {
+  background-color: var(--theme-color);
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 120px;
+  color: #ffffff;
+  border: none;
+}
