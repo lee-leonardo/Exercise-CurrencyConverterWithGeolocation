@@ -38,7 +38,7 @@ label {
   border: none;
   border-bottom-color: var(--input-color);
   border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
 
   color: var(--input-color);
   font-size: var(--input-font-size);
